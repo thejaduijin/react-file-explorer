@@ -53,7 +53,7 @@ function Folder({ explorer, handleInsertNode }) {
                     }
                     {explorer.items.map((exp) => {
                         return (
-                            <Folder explorer={exp} key={exp.id} />
+                            <Folder handleInsertNode={handleInsertNode} explorer={exp} key={exp.id} />
                         )
                     })}
                 </div>

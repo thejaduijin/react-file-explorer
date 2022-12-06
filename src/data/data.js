@@ -10,7 +10,7 @@ const explorer = {
         items: [
           {
             id:"3",
-            name: "public nested 1",
+            name: "public nested",
             isFolder: true,
             items: [
               {
