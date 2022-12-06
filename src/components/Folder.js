@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles.css';
 
-function Folder({ explorer }) {
+function Folder({ explorer, handleInsertNode }) {
     console.log(explorer);
 
     const [expand, setExpand] = useState(false);
@@ -19,8 +19,9 @@ function Folder({ explorer }) {
     }
 
     const onAddFolder = (e) => {
-        if (e.keyCode === 13 && e.target.value){
-            setShowInput({...showInput,visible:false})
+        if (e.keyCode === 13 && e.target.value) {
+            handleInsertNode(explorer.id, e.target.value, showInput.isFolder)
+            setShowInput({ ...showInput, visible: false })
         }
     }
 
