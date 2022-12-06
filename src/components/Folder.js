@@ -13,12 +13,10 @@ function Folder({ explorer }) {
                         📁 {explorer.name}
                     </span>
                 </div>
-                <div style={{display:expand?"block":"none"}}>
+                <div style={{display:expand?"block":"none", paddingLeft:25}}>
                     {explorer.items.map((exp) => {
                         return (
-                            <span>
-                                {exp.name}
-                            </span>
+                           <Folder explorer={exp} key={exp.id}/>
                         )
                     })}
                 </div>
